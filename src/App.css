@@ -1,0 +1,33 @@
+.App {
+  width: 700px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.Ropes {
+  height: 150px;
+  margin-top: -10px;
+  display: flex;
+  flex-direction: row;
+}
+.Rope {
+  height: 150px;
+  flex: 1;
+  text-align: center;
+}
+.Rope img {
+  min-height: 150px;
+  max-width: 100%;
+  max-height: 150px;
+  vertical-align: middle;
+  align-self: center;
+}
+.Board {
+  background-color: #2D3A4B;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 700px;
+  height: 900px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+}
