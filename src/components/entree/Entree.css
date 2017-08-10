@@ -4,7 +4,7 @@
   width: 700px;
   position: relative;
   z-index: 2;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 .ContainerEntree {
   background-color: #2D3A4B;
@@ -14,18 +14,18 @@
   z-index: 2;
 }
 .SideEntree {
-  height: 300px;
+  height: 250px;
   flex: 1;
   text-align: center;
   position: absolute;
   top: 100px;
-  left: -150px;
+  left: -200px;
   z-index: 1;
 }
 .SideEntree img {
-  min-height: 300px;
+  min-height: 250px;
   max-width: 100%;
-  max-height: 300px;
+  max-height: 250px;
   vertical-align: middle;
   align-self: center;
 }
@@ -45,7 +45,7 @@
   width: 65%;
   position: absolute;
   top: -30px;
-  left: -60px;
+  left: 60px;
   z-index: 3;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
   display: flex;
@@ -97,8 +97,9 @@
   border-top: 1px solid #CFD8DC;
 }
 .PhotoEntree {
-  background: url('../images/wine.jpg') 50% 50% no-repeat;
+  background: url('../images/wine.jpg') 50% 0% no-repeat;
   width: 50%;
+  padding-top: 50%;
   flex: 1;
   text-align: center;
   position: absolute;
@@ -106,9 +107,4 @@
   right: -50px;
   z-index: 4;
   box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.5);;
-}
-.PhotoEntree:before{
-	content: "";
-	display: block;
-	padding-top: 100%; 	/* initial ratio of 1:1*/
 }

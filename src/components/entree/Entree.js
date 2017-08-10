@@ -11,42 +11,26 @@ class Entree extends Component {
 		this.state = {
 			isScrolled: false
 		};
+    this.onScroll = this.onScroll.bind(this);
 	}
   onScroll = () => {
     if (this.state.isScrolled == false) {
       if (ReactDOM.findDOMNode(this.refs.entree).getBoundingClientRect().top > 0 && 
         ReactDOM.findDOMNode(this.refs.entree).getBoundingClientRect().top < window.innerHeight) {
           	this.setState({isScrolled: true});
-            console.log('in view!');
       }
+    } else {
     }
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll.bind(this));
+    window.addEventListener('scroll', () => this.onScroll());
   }
   render() {
     return (
-      // <div className="Entree" ref="entree" >
-      //   <SideEntree></SideEntree>
-      //   <ContainerEntree></ContainerEntree>
-      // </div>
-      <Motion ref="entree" style={{ 
-          opacity: spring(this.state.isScrolled ? 1 : 0),
-         }}>
-         {({opacity}) =>
-         <div className="Entree"  style={{
-                opacity: `${opacity}`,
-                WebkitTransitionDuration: '1s',
-                transitionDuration: '1s',
-                WebkitTransitionDelay: '1s',
-                transitionDelay: '1s',
-              }}>
-           <SideEntree></SideEntree>
-           <ContainerEntree></ContainerEntree>
-         </div>
-       }
-      </Motion>
-      
+      <div className="Entree" ref="entree">
+        <SideEntree scrolled={this.state.isScrolled}></SideEntree>
+        <ContainerEntree scrolled={this.state.isScrolled}></ContainerEntree>
+      </div>
     );
   }
 }

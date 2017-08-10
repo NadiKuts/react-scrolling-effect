@@ -25,12 +25,12 @@ class Note extends Component {
                 opacity: `${opacity}`,
                 WebkitTransform: `translateY(${y}px)`,
                 transform: `translateY(${y}px)`,
-                WebkitTransitionDuration: '0.3s',
-                transitionDuration: '0.3s',
+                WebkitTransitionDuration: '0.5s',
+                transitionDuration: '0.5s',
                 WebkitTransitionTimingFunction: 'linear',
                 transitionTimingFunction: 'linear',
-                WebkitTransitionDelay: '0.2s',
-                transitionDelay: '0.2s',
+                WebkitTransitionDelay: '0.5s',
+                transitionDelay: '0.5s',
               }}>
            <div className='Date'>
              <p>AUGUST 5</p>

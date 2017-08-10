@@ -26,10 +26,10 @@ class Board extends Component {
                 width: `${width}`,
                 WebkitTransitionDuration: '0.5s',
                 transitionDuration: '0.5s',
-                WebkitTransitionTimingFunction: 'linear',
-                transitionTimingFunction: 'linear',
-                // WebkitTransitionDelay: '1s',
-                // transitionDelay: '1s',
+                WebkitTransitionTimingFunction: 'ease',
+                transitionTimingFunction: 'ease',
+                WebkitTransitionDelay: '1s',
+                transitionDelay: '1s',
               }}>
            <Header></Header>
            <Entree></Entree>

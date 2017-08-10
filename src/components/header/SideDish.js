@@ -22,14 +22,14 @@ class SideDish extends Component {
          }}>
          {({x}) =>
          <div className="SideDish" style={{
-                left: `${x}px`,
-                WebkitTransitionDuration: '0.5s',
-                transitionDuration: '0.5s',
-                WebkitTransitionTimingFunction: 'ease',
-                transitionTimingFunction: 'ease',
-                WebkitTransitionDelay: '0.5s',
-                transitionDelay: '0.5s',
-              }}>
+           left: `${x}px`,
+           WebkitTransitionDuration: '0.5s',
+           transitionDuration: '0.5s',
+           WebkitTransitionTimingFunction: 'ease-in-out',
+           transitionTimingFunction: 'ease-in-out',
+           WebkitTransitionDelay: '1s',
+           transitionDelay: '1s',
+         }}>
            <img src={dishPic}/>
          </div>
        }

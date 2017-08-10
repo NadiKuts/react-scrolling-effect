@@ -19,18 +19,18 @@ class Title extends Component {
       //   <h1>MENU</h1>
       // </div>
       <Motion style={{ 
-					opacity: spring(this.state.wasLoaded ? 1 : 0,{stiffness: 300, damping: 17}),
-					y: spring(this.state.wasLoaded ? 0 : 50, {stiffness: 100, damping: 17})
+					opacity: spring(this.state.wasLoaded ? 1 : 0),
+					y: spring(this.state.wasLoaded ? 0 : 50)
 				 }}>
          {({opacity, y}) =>
          <div className="Title" style={{
                 opacity: `${opacity}`,
                 WebkitTransform: `translateY(${y}px)`,
                 transform: `translateY(${y}px)`,
-                WebkitTransitionDuration: '0.3s',
-                transitionDuration: '0.3s',
-                WebkitTransitionTimingFunction: 'ease-in',
-                transitionTimingFunction: 'ease-in',
+                WebkitTransitionDuration: '0.5s',
+                transitionDuration: '0.5s',
+                WebkitTransitionTimingFunction: 'linear',
+                transitionTimingFunction: 'linear',
               }}>
            <h1>MENU</h1>
          </div>

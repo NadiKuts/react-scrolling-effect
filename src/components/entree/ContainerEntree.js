@@ -9,8 +9,8 @@ class ContainerEntree extends Component {
     return (
       <div className="ContainerEntree">
         <BackgroundCard></BackgroundCard>
-        <EntreeCard></EntreeCard>
-        <PhotoEntree></PhotoEntree>
+        <EntreeCard scrolled={this.props.scrolled}></EntreeCard>
+        <PhotoEntree scrolled={this.props.scrolled}></PhotoEntree>
       </div>
     );
   }
