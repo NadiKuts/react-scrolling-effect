@@ -5,20 +5,20 @@
   flex-direction: column;
 }
 .Ropes {
-  height: 150px;
+  height: 80px;
   margin-top: -10px;
   display: flex;
   flex-direction: row;
 }
 .Rope {
-  height: 150px;
+  height: 80px;
   flex: 1;
   text-align: center;
 }
 .Rope img {
-  min-height: 150px;
+  min-height: 80px;
   max-width: 100%;
-  max-height: 150px;
+  max-height: 80px;
   vertical-align: middle;
   align-self: center;
 }

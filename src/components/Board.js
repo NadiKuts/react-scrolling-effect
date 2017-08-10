@@ -24,10 +24,12 @@ class Board extends Component {
          {({width}) =>
          <div className="Board" style={{
                 width: `${width}`,
-                WebkitTransitionDuration: '1s',
-                transitionDuration: '1s',
-                WebkitTransitionDelay: '1s',
-                transitionDelay: '1s',
+                WebkitTransitionDuration: '0.5s',
+                transitionDuration: '0.5s',
+                WebkitTransitionTimingFunction: 'linear',
+                transitionTimingFunction: 'linear',
+                // WebkitTransitionDelay: '1s',
+                // transitionDelay: '1s',
               }}>
            <Header></Header>
            <Entree></Entree>

@@ -27,10 +27,10 @@ class Title extends Component {
                 opacity: `${opacity}`,
                 WebkitTransform: `translateY(${y}px)`,
                 transform: `translateY(${y}px)`,
-                WebkitTransitionDuration: '1s',
-                transitionDuration: '1s',
-                WebkitTransitionTimingFunction: 'linear',
-                transitionTimingFunction: 'linear',
+                WebkitTransitionDuration: '0.3s',
+                transitionDuration: '0.3s',
+                WebkitTransitionTimingFunction: 'ease-in',
+                transitionTimingFunction: 'ease-in',
               }}>
            <h1>MENU</h1>
          </div>

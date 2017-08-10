@@ -2,29 +2,29 @@
 
 .Header {
   background: green;
-  height: 500px;
+  height: 400px;
   width: 100%;
   position:  relative;
   z-index: 2;
 }
 .Main {
   background-color: #2D3A4B;
-  height: 500px;
+  height: 400px;
   width: 100%;
   position: relative;
   z-index: 2;
 }
 .Title {
-  height: 200px;
+  height: 150px;
   width: 700px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
   position: absolute;
   z-index: 3;
 }
 .Title h1 {
   width: 100%;
-  font-size: 90px;
+  font-size: 70px;
   text-align: center;
   color: #FFFFFF;
   letter-spacing: 50px;
@@ -40,11 +40,11 @@
 .NoteBackground {
   background-color: #5E6E79;
   opacity: 0.8;
-  height: 300px;
-  width: 600px;
+  height: 250px;
+  width: 500px;
   position: absolute;
   z-index: 1;
-  top: 200px;
+  top: 150px;
   right: -50px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   display: flex;
@@ -52,11 +52,11 @@
 }
 .Note {
   opacity: 0.8;
-  height: 300px;
-  width: 600px;
+  height: 250px;
+  width: 500px;
   position: absolute;
   z-index: 2;
-  top: 200px;
+  top: 150px;
   right: -50px;
   display: flex;
   flex-direction: column;
@@ -82,18 +82,18 @@
   opacity: 1;
 }
 .SideDish {
-  height: 300px;
+  height: 250px;
   flex: 1;
   text-align: center;
   position: absolute;
-  top: 200px;
+  top: 150px;
   left: -150px;
   z-index: 1;
 }
 .SideDish img {
-  min-height: 300px;
+  min-height: 250px;
   max-width: 100%;
-  max-height: 300px;
+  max-height: 250px;
   vertical-align: middle;
   align-self: center;
 }

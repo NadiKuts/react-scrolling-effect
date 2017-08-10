@@ -23,10 +23,12 @@ class SideDish extends Component {
          {({x}) =>
          <div className="SideDish" style={{
                 left: `${x}px`,
-                WebkitTransitionDuration: '1s',
-                transitionDuration: '1s',
-                WebkitTransitionTimingFunction: 'linear',
-                transitionTimingFunction: 'linear',
+                WebkitTransitionDuration: '0.5s',
+                transitionDuration: '0.5s',
+                WebkitTransitionTimingFunction: 'ease',
+                transitionTimingFunction: 'ease',
+                WebkitTransitionDelay: '0.5s',
+                transitionDelay: '0.5s',
               }}>
            <img src={dishPic}/>
          </div>

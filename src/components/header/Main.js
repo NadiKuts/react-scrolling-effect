@@ -23,20 +23,20 @@ class Main extends Component {
         <Note></Note>
         <Motion style={{ 
             opacity: spring(this.state.wasLoaded ? 1 : 0),
-            // height: spring(this.state.wasLoaded ? 300 : 200),
-            // top: spring(this.state.wasLoaded ? 200 : 250),
-            // right: spring(this.state.wasLoaded ? -50 : -150),
+            right: spring(this.state.wasLoaded ? -50 : 100),
            }}>
            {({opacity, height, top, right}) =>
            <div className='NoteBackground' style={{
                   opacity: `${opacity}`,
                   // height: `${height}`,
                   // top: `${top}`,
-                  // right: `${right}`,
-                  WebkitTransitionDuration: '1s',
-                  transitionDuration: '1s',
-                  WebkitTransitionDelay: '1s',
-                  transitionDelay: '1s',
+                  right: `${right}`,
+                  WebkitTransitionDuration: '0.5s',
+                  transitionDuration: '0.5s',
+                  WebkitTransitionTimingFunction: 'ease',
+                  transitionTimingFunction: 'ease',
+                  WebkitTransitionDelay: '0.5s',
+                  transitionDelay: '0.5s',
                 }}></div>
          }
         </Motion>
