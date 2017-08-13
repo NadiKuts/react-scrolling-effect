@@ -18,17 +18,18 @@ class SideDish extends Component {
   render() {
     return (
       <Motion style={{ 
-          x: spring(this.state.wasLoaded ? -150 : 0),
+          x: spring(this.props.initialAnimation ? -150 : (this.props.scrolled ? -150 : -50)),
+          time: spring(this.props.initialAnimation ? 1 : 0),
          }}>
-         {({x}) =>
+         {({x, time}) =>
          <div className="SideDish" style={{
            left: `${x}px`,
            WebkitTransitionDuration: '0.5s',
            transitionDuration: '0.5s',
-           WebkitTransitionTimingFunction: 'ease-in-out',
-           transitionTimingFunction: 'ease-in-out',
-           WebkitTransitionDelay: '1s',
-           transitionDelay: '1s',
+           WebkitTransitionTimingFunction: 'ease-out',
+           transitionTimingFunction: 'ease-out',
+           WebkitTransitionDelay: `${time}s`,
+           transitionDelay: `${time}s`,
          }}>
            <img src={dishPic}/>
          </div>

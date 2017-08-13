@@ -18,19 +18,22 @@ class Note extends Component {
     return (
       <Motion style={{ 
           opacity: spring(this.state.wasLoaded ? 1 : 0),
-          y: spring(this.state.wasLoaded ? 0 : 50)
+          y: spring(this.state.wasLoaded ? 0 : 50),
+          right: spring(this.props.initialAnimation ? -50 : (this.props.scrolled ? -50 : 10)),
+          time: spring(this.props.initialAnimation ? 0.5 : 0),
          }}>
-         {({opacity, y}) =>
+         {({opacity, y, right, time}) =>
          <div className="Note" style={{
                 opacity: `${opacity}`,
+                right: `${right}`,
                 WebkitTransform: `translateY(${y}px)`,
                 transform: `translateY(${y}px)`,
                 WebkitTransitionDuration: '0.5s',
                 transitionDuration: '0.5s',
-                WebkitTransitionTimingFunction: 'linear',
-                transitionTimingFunction: 'linear',
-                WebkitTransitionDelay: '0.5s',
-                transitionDelay: '0.5s',
+                WebkitTransitionTimingFunction: 'ease-out',
+                transitionTimingFunction: 'ease-out',
+                WebkitTransitionDelay: `${time}s`,
+                transitionDelay: `${time}s`,
               }}>
            <div className='Date'>
              <p>AUGUST 5</p>

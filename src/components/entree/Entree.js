@@ -12,6 +12,7 @@ class Entree extends Component {
 			isScrolledFirst: false,
       initialAnimation: false,
       inView: false,
+      partlyInView: false,
       wasLoaded: false,
       lastScrollPos: 0,
       direction: '',
@@ -26,27 +27,34 @@ class Entree extends Component {
     if ((bottomPart < window.scrollY + winHeight) && (topPart > 0 && topPart < winHeight)) {
       this.setState({
         inView: true,
+        partlyInView: false,
+      });
+    } else if ((bottomPart < window.scrollY + winHeight) || (topPart > 0 && topPart < winHeight)) {
+      this.setState({
+        inView: false,
+        partlyInView: true,
       });
     } else {
       this.setState({
         inView: false,
+        partlyInView: false,
       });
     }
   }
   
   onScroll = (event) => {
     /** Detect direction of scrolling */
-    if (this.state.lastScrollPos < window.scrollY) {
-      this.setState({
-        lastScrollPos: window.scrollY,
-        direction: 'down',
-      });
-    } else {
-      this.setState({
-        lastScrollPos: window.scrollY,
-        direction: 'up',
-      });
-    }
+    // if (this.state.lastScrollPos < window.scrollY) {
+    //   this.setState({
+    //     lastScrollPos: window.scrollY,
+    //     direction: 'down',
+    //   });
+    // } else {
+    //   this.setState({
+    //     lastScrollPos: window.scrollY,
+    //     direction: 'up',
+    //   });
+    // }
     /** Detect if component is completely visible */
     if (this.state.isScrolledFirst == false) {
       this.setState({
@@ -54,13 +62,13 @@ class Entree extends Component {
         initialAnimation: true,
       });
       this.isVisible(this.refs.entree);
-
     } else {
       this.setState({
         initialAnimation: false,
       });
       this.isVisible(this.refs.entree);
     }
+    // console.log('inView', this.state.inView, 'partly', this.state.partlyInView);
   }
   
   componentDidMount() {
@@ -86,8 +94,8 @@ class Entree extends Component {
                 WebkitTransitionDelay: '1s',
                 transitionDelay: '1s',
               }}>
-           <SideEntree scrolled={this.state.inView} firstTime={this.initialAnimation}></SideEntree>
-           <ContainerEntree scrolled={this.state.inView} firstTime={this.initialAnimation}></ContainerEntree>
+           <SideEntree initialAnimation={this.state.initialAnimation} inView={this.state.inView} partlyInView={this.state.partlyInView}></SideEntree>
+           <ContainerEntree initialAnimation={this.state.initialAnimation} inView={this.state.inView} partlyInView={this.state.partlyInView}></ContainerEntree>
          </div>
        }
       </Motion>

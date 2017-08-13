@@ -3,10 +3,21 @@ import {Motion, spring} from 'react-motion';
 import './Entree.css';
 
 class PhotoEntree extends Component {
+  constructor(props) {
+		super(props);
+		this.state = {
+			wasLoaded: false
+		};
+	}
+  
+  componentDidMount = () => {
+     	this.setState({wasLoaded: !this.state.wasLoaded});
+	}
+  
   render() {
     return (
       <Motion ref="entree" style={{
-        width: spring(this.props.scrolled ? 50 : 100),
+        width: spring(this.props.inView ? 50 : (this.props.partlyInView ? 80 : 100)),
       }}>
           {({width}) =>
           <div className="PhotoEntree" style={{

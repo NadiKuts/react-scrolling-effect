@@ -7,10 +7,11 @@ class SideEntree extends Component {
   render() {
     return (
       <Motion ref="entree" style={{
-        x: spring(this.props.scrolled ? -200 : 0),
-        y: spring(this.props.scrolled ? 100 : 150),
+        x: spring(this.props.inView ? -200 : (this.props.partlyInView ? -180 : -150)),
+        y: spring(this.props.initialAnimation ? 100 : 150),
+        time: spring(this.props.initialAnimation ? 1 : 0),
       }}>
-      {({x, y}) =>
+      {({x, y, time}) =>
          <div className="SideEntree" style={{
            left: `${x}px`,
            top: `${y}px`,
@@ -18,8 +19,8 @@ class SideEntree extends Component {
            transitionDuration: '0.5s',
            WebkitTransitionTimingFunction: 'ease-out',
            transitionTimingFunction: 'ease-out',
-           WebkitTransitionDelay: '0s',
-           transitionDelay: '0s',
+           WebkitTransitionDelay: `${time}s`,
+           transitionDelay: `${time}s`,
          }}>
            <img src={dishPic}/>
          </div>
