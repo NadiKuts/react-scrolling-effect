@@ -7,8 +7,8 @@ class SideMain extends Component {
   render() {
     return (
       <Motion ref="entree" style={{
-        x: spring(this.props.scrolled ? -250 : 0),
-        y: spring(this.props.scrolled ? 200 : 300),
+        x: spring(this.props.inView ? -250 : (this.props.partlyInView ? -180 : -150)),
+        y: spring(this.props.inView ? 200 : 250),
       }}>
       {({x, y}) =>
          <div className="SideMain" style={{

@@ -43,18 +43,6 @@ class Entree extends Component {
   }
   
   onScroll = (event) => {
-    /** Detect direction of scrolling */
-    // if (this.state.lastScrollPos < window.scrollY) {
-    //   this.setState({
-    //     lastScrollPos: window.scrollY,
-    //     direction: 'down',
-    //   });
-    // } else {
-    //   this.setState({
-    //     lastScrollPos: window.scrollY,
-    //     direction: 'up',
-    //   });
-    // }
     /** Detect if component is completely visible */
     if (this.state.isScrolledFirst == false) {
       this.setState({
@@ -68,7 +56,6 @@ class Entree extends Component {
       });
       this.isVisible(this.refs.entree);
     }
-    // console.log('inView', this.state.inView, 'partly', this.state.partlyInView);
   }
   
   componentDidMount() {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Motion, spring} from 'react-motion';
-import './Main.css';
-import SideMain from './SideMain';
-import ContainerMain from './ContainerMain';
+import './Dessert.css';
+import SideDessert from './SideDessert';
+import ContainerDessert from './ContainerDessert';
 
-class MainDish extends Component {
+class Dessert extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
@@ -43,17 +43,16 @@ class MainDish extends Component {
   
   onScroll = (event) => {
     /** Detect if component is completely visible */
-    if (this.state.isScrolledFirst == false) {
+    if (this.state.initialAnimation == false) {
       this.setState({
-        isScrolledFirst: true,
         initialAnimation: true,
       });
-      this.isVisible(this.refs.main);
+      this.isVisible(this.refs.dessert);
     } else {
       this.setState({
         initialAnimation: false,
       });
-      this.isVisible(this.refs.main);
+      this.isVisible(this.refs.dessert);
     }
   }
   
@@ -65,12 +64,12 @@ class MainDish extends Component {
   }
   render() {
     return (
-      <Motion ref="main" style={{ 
+      <Motion ref="dessert" style={{ 
 
           opacity: spring(this.state.wasLoaded ? 1 : 0),
          }}>
          {({width, opacity}) =>
-         <div className="MainDish" style={{
+         <div className="Dessert" style={{
             
                 opacity: `${opacity}`,
                 WebkitTransitionDuration: '0.5s',
@@ -80,8 +79,8 @@ class MainDish extends Component {
                 WebkitTransitionDelay: '1s',
                 transitionDelay: '1s',
               }}>
-           <SideMain inView={this.state.inView} initialAnimation={this.initialAnimation} partlyInView={this.state.partlyInView}></SideMain>
-           <ContainerMain inView={this.state.inView} initialAnimation={this.initialAnimation} partlyInView={this.state.partlyInView}></ContainerMain>
+           <SideDessert initialAnimation={this.state.initialAnimation} inView={this.state.inView} partlyInView={this.state.partlyInView}></SideDessert>
+           <ContainerDessert initialAnimation={this.state.initialAnimation} inView={this.state.inView} partlyInView={this.state.partlyInView}></ContainerDessert>
          </div>
        }
       </Motion>
@@ -90,4 +89,4 @@ class MainDish extends Component {
   }
 }
 
-export default MainDish;
+export default Dessert;

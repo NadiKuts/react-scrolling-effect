@@ -9,8 +9,8 @@ class ContainerMain extends Component {
     return (
       <div className="ContainerMain">
         <BackgroundMain></BackgroundMain>
-        <MainCard scrolled={this.props.scrolled}></MainCard>
-        <PhotoMain scrolled={this.props.scrolled}></PhotoMain>
+        <MainCard inView={this.props.inView} partlyInView={this.props.partlyInView}></MainCard>
+        <PhotoMain inView={this.props.inView} partlyInView={this.props.partlyInView}></PhotoMain>
       </div>
     );
   }

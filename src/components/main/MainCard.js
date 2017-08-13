@@ -9,8 +9,10 @@ class MainCard extends Component {
   render() {
     return (
       <Motion ref="main" style={{
-        x: spring(this.props.scrolled ? 20 : 100),
-        y: spring(this.props.scrolled ? 150 : 250),
+        x: spring(this.props.inView ? 20 : (this.props.partlyInView ? 30 : 100)),
+        y: spring(this.props.inView ? 150 : (this.props.partlyInView ? 80 : 250)),
+        // x: spring(this.props.inView ? 20 : 100),
+        // y: spring(this.props.inView ? 150 : 250),
       }}>
           {({x, y}) =>
           <div className="MainCard" style={{

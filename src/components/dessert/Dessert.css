@@ -1,18 +1,18 @@
-.Entree {
+.Dessert {
   height: 450px;
   width: 100%;
   position: relative;
   z-index: 2;
-  margin-top: 300px;
+  margin-top: 250px;
 }
-.ContainerEntree {
+.ContainerDessert {
   background-color: #2D3A4B;
   height: 500px;
   width: 700px;
   position: relative;
   z-index: 2;
 }
-.SideEntree {
+.SideDessert {
   height: 250px;
   flex: 1;
   text-align: center;
@@ -21,15 +21,15 @@
   left: -200px;
   z-index: 1;
 }
-.SideEntree img {
+.SideDessert img {
   min-height: 250px;
   max-width: 100%;
   max-height: 250px;
   vertical-align: middle;
   align-self: center;
 }
-.BackgroundCard {
-  background-color: #C4CB53;
+.BackgroundDessert {
+  background-color: #A98E68;
   height: 350px;
   width: 800px;
   opacity: 0.9;
@@ -38,7 +38,7 @@
   z-index: 2;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
 }
-.EntreeCard {
+.DessertCard {
   background-color: #FFFFFF;
   height: 300px;
   width: 65%;
@@ -52,7 +52,7 @@
   align-items: center;
   flex-direction: column;
 }
-.menuCard {
+.DessertCard .menuCard {
   height: 90%;
   width: 90%;
   position: relative;
@@ -63,7 +63,7 @@
   border-top: 1px solid #CFD8DC;
   border-bottom: 1px solid #CFD8DC;
 }
-.Category, .DishName, .DishDescription {
+.CategoryDessert, .DessertName, .DessertDescription {
   border-bottom: 1px solid #CFD8DC;
   margin-top: 5px;
   display: flex;
@@ -71,14 +71,14 @@
   align-items: center;
   text-align: center;
 }
-.Category {
+.CategoryDessert {
   color: #D4A18E;
   font-size: 18px;
   font-weight: bold;
   flex: 2;
   width: 50%;
 }
-.DishName {
+.DessertName {
   color: #708590;
   font-size: 30px;
   font-weight: bold;
@@ -87,7 +87,7 @@
   width: 80%;
   border-top: 1px solid #CFD8DC;
 }
-.DishDescription {
+.DessertDescription {
   color: #708590;
   font-size: 14px;
   flex: 3;
@@ -95,8 +95,8 @@
   margin-bottom: 5px;
   border-top: 1px solid #CFD8DC;
 }
-.PhotoEntree {
-  background: url('../images/wine.jpg') 50% 0% no-repeat;
+.PhotoDessert {
+  background: url('../images/dessert.jpg') 50% 0% no-repeat;
   width: 50%;
   padding-top: 50%;
   flex: 1;

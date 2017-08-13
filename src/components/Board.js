@@ -4,6 +4,7 @@ import '../App.css';
 import Header from './header/Header';
 import Entree from './entree/Entree';
 import MainDish from './main/MainDish';
+import Dessert from './dessert/Dessert';
 
 class Board extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class Board extends Component {
            <Header></Header>
            <Entree></Entree>
            <MainDish></MainDish>
+           <Dessert></Dessert>
          </div>
        }
       </Motion>
