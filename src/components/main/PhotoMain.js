@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import {Motion, spring} from 'react-motion';
-import './Entree.css';
+import './Main.css';
 
-class PhotoEntree extends Component {
+class PhotoMain extends Component {
   render() {
     return (
-      <Motion ref="entree" style={{
-        width: spring(this.props.scrolled ? 50 : 100),
+      <Motion ref="main" style={{
+        width: spring(this.props.scrolled ? 100 : 70),
       }}>
           {({width}) =>
-          <div className="PhotoEntree" style={{
+          <div className="PhotoMain" style={{
             width: `${width}%`,
             WebkitTransitionDuration: '0.5s',
             transitionDuration: '0.5s',
@@ -26,4 +26,4 @@ class PhotoEntree extends Component {
   }
 }
 
-export default PhotoEntree;
+export default PhotoMain;

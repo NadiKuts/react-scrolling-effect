@@ -1,58 +1,58 @@
-.Entree {
+.MainDish {
   height: 450px;
   width: 100%;
   position: relative;
   z-index: 2;
-  margin-top: 150px;
+  margin-top: 50px;
 }
-.ContainerEntree {
-  background-color: #2D3A4B;
-  height: 500px;
-  width: 700px;
-  position: relative;
-  z-index: 2;
-}
-.SideEntree {
+.SideMain{
   height: 250px;
   flex: 1;
   text-align: center;
   position: absolute;
-  top: 100px;
-  left: -200px;
+  top: 200px;
+  right: -200px;
   z-index: 1;
 }
-.SideEntree img {
+.SideMain img {
   min-height: 250px;
   max-width: 100%;
   max-height: 250px;
   vertical-align: middle;
   align-self: center;
 }
-.BackgroundCard {
-  background-color: #C4CB53;
+.ContainerMain {
+  background-color: #2D3A4B;
+  height: 500px;
+  width: 700px;
+  position: relative;
+  z-index: 2;
+}
+.BackgroundMain {
+  background-color: #D55B54;
   height: 350px;
   width: 800px;
   opacity: 0.9;
   position: absolute;
-  left: -30px;
+  right: -30px;
   z-index: 2;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
 }
-.EntreeCard {
+.MainCard {
   background-color: #FFFFFF;
   height: 300px;
-  width: 65%;
+  width: 50%;
   position: absolute;
-  top: -30px;
+  top: 100px;
   left: 60px;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.menuCard {
+.MainCard .menuCard {
   height: 90%;
   width: 90%;
   position: relative;
@@ -60,10 +60,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 4;
   border-top: 1px solid #CFD8DC;
   border-bottom: 1px solid #CFD8DC;
 }
-.Category, .DishName, .DishDescription {
+.CategoryMain, .MainName, .MainDescription {
   border-bottom: 1px solid #CFD8DC;
   margin-top: 5px;
   display: flex;
@@ -71,14 +72,14 @@
   align-items: center;
   text-align: center;
 }
-.Category {
+.CategoryMain {
   color: #D4A18E;
   font-size: 18px;
   font-weight: bold;
   flex: 2;
   width: 50%;
 }
-.DishName {
+.MainName {
   color: #708590;
   font-size: 30px;
   font-weight: bold;
@@ -87,7 +88,7 @@
   width: 80%;
   border-top: 1px solid #CFD8DC;
 }
-.DishDescription {
+.MainDescription {
   color: #708590;
   font-size: 14px;
   flex: 3;
@@ -95,15 +96,15 @@
   margin-bottom: 5px;
   border-top: 1px solid #CFD8DC;
 }
-.PhotoEntree {
-  background: url('../images/wine.jpg') 50% 0% no-repeat;
-  width: 50%;
+.PhotoMain {
+  background: url('../images/steak.jpg') 50% 0% no-repeat;
+  width: 100%;
   padding-top: 50%;
   flex: 1;
   text-align: center;
   position: absolute;
-  top: -50px;
-  right: -50px;
-  z-index: 4;
+  top: 50px;
+  left: 100px;
+  z-index: 3;
   box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.5);;
 }

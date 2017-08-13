@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Motion, spring} from 'react-motion';
-import './Entree.css';
-import SideEntree from './SideEntree';
-import ContainerEntree from './ContainerEntree';
+import './Main.css';
+import SideMain from './SideMain';
+import ContainerMain from './ContainerMain';
 
-class Entree extends Component {
+class MainDish extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
@@ -53,13 +53,13 @@ class Entree extends Component {
         isScrolledFirst: true,
         initialAnimation: true,
       });
-      this.isVisible(this.refs.entree);
+      this.isVisible(this.refs.main);
 
     } else {
       this.setState({
         initialAnimation: false,
       });
-      this.isVisible(this.refs.entree);
+      this.isVisible(this.refs.main);
     }
   }
   
@@ -71,12 +71,12 @@ class Entree extends Component {
   }
   render() {
     return (
-      <Motion ref="entree" style={{ 
+      <Motion ref="main" style={{ 
 
           opacity: spring(this.state.wasLoaded ? 1 : 0),
          }}>
          {({width, opacity}) =>
-         <div className="Entree" style={{
+         <div className="MainDish" style={{
             
                 opacity: `${opacity}`,
                 WebkitTransitionDuration: '0.5s',
@@ -86,8 +86,8 @@ class Entree extends Component {
                 WebkitTransitionDelay: '1s',
                 transitionDelay: '1s',
               }}>
-           <SideEntree scrolled={this.state.inView} firstTime={this.initialAnimation}></SideEntree>
-           <ContainerEntree scrolled={this.state.inView} firstTime={this.initialAnimation}></ContainerEntree>
+           <SideMain scrolled={this.state.inView} firstTime={this.initialAnimation}></SideMain>
+           <ContainerMain scrolled={this.state.inView} firstTime={this.initialAnimation}></ContainerMain>
          </div>
        }
       </Motion>
@@ -96,4 +96,4 @@ class Entree extends Component {
   }
 }
 
-export default Entree;
+export default MainDish;

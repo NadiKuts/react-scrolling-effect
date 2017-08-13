@@ -3,6 +3,7 @@ import {Motion, spring} from 'react-motion';
 import '../App.css';
 import Header from './header/Header';
 import Entree from './entree/Entree';
+import MainDish from './main/MainDish';
 
 class Board extends Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class Board extends Component {
               }}>
            <Header></Header>
            <Entree></Entree>
+           <MainDish></MainDish>
          </div>
        }
       </Motion>
