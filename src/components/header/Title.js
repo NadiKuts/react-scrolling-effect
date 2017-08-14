@@ -20,7 +20,7 @@ class Title extends Component {
       // </div>
       <Motion style={{ 
 					opacity: spring(this.state.wasLoaded ? 1 : 0),
-					y: spring(this.state.wasLoaded ? 0 : 50)
+					y: spring(this.state.wasLoaded ? 0 : 100)
 				 }}>
          {({opacity, y}) =>
          <div className="Title" style={{

@@ -21,11 +21,11 @@ class Board extends Component {
   render() {
     return (
       <Motion style={{ 
-          width: spring(this.state.wasLoaded ? 700 : 650),
+          width: spring(this.state.wasLoaded ? 50 : 40),
          }}>
          {({width}) =>
          <div className="Board" style={{
-                width: `${width}`,
+                width: `${width}%`,
                 WebkitTransitionDuration: '0.5s',
                 transitionDuration: '0.5s',
                 WebkitTransitionTimingFunction: 'ease',
