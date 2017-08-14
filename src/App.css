@@ -31,13 +31,18 @@
   order: 2;
   background-color: #2D3A4B;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  width: 60%;
+  width: 50%;
   height: auto;
   padding-bottom: 200px;
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 850px) and (min-width: 450px) {
+  
+}
+
 @media screen and (max-width: 450px) {
   
 }

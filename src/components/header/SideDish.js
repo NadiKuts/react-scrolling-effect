@@ -18,7 +18,7 @@ class SideDish extends Component {
   render() {
     return (
       <Motion style={{
-        x: spring(this.props.initialAnimation ? -10 : (this.props.inView ? -5 : 0)),
+        x: spring(this.props.initialAnimation ? -10 : (this.props.inView ? -8 : 0)),
         time: spring(this.props.initialAnimation ? 1 : 0),
       }}>
          {({x, time}) =>

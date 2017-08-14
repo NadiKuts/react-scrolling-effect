@@ -23,7 +23,7 @@ class Main extends Component {
         <Note initialAnimation={this.props.initialAnimation} inView={this.props.inView}></Note>
         <Motion style={{
             opacity: spring(this.state.wasLoaded ? 1 : 0),
-            top: spring(this.state.wasLoaded ? 20 : 15),
+            top: spring(this.state.wasLoaded ? 150 : 100),
             right: spring(this.props.initialAnimation ? -8 : (this.props.inView ? -8 : 5)),
             time: spring(this.props.initialAnimation ? 1 : 0),
            }}>
@@ -31,7 +31,7 @@ class Main extends Component {
            <div className='NoteBackground' style={{
                   opacity: `${opacity}`,
                   right: `${right}vw`,
-                  top: `${top}vh`,
+                  top: `${top}px`,
                   WebkitTransitionDuration: '0.5s',
                   transitionDuration: '0.5s',
                   WebkitTransitionTimingFunction: 'ease-out',

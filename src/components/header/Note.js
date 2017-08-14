@@ -18,7 +18,7 @@ class Note extends Component {
     return (
       <Motion style={{ 
           opacity: spring(this.state.wasLoaded ? 1 : 0),
-          y: spring(this.state.wasLoaded ? 0 : 20),
+          y: spring(this.state.wasLoaded ? 0 : 150),
           right: spring(this.props.initialAnimation ? -8 : (this.props.inView ? -8 : 5)),
           time: spring(this.props.initialAnimation ? 0.5 : 0),
          }}>
@@ -26,8 +26,8 @@ class Note extends Component {
          <div className="Note" style={{
                 opacity: `${opacity}`,
                 right: `${right}vw`,
-                WebkitTransform: `translateY(${y}vh)`,
-                transform: `translateY(${y}vh)`,
+                WebkitTransform: `translateY(${y}px)`,
+                transform: `translateY(${y}px)`,
                 WebkitTransitionDuration: '0.5s',
                 transitionDuration: '0.5s',
                 WebkitTransitionTimingFunction: 'ease-out',

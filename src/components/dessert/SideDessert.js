@@ -8,13 +8,13 @@ class SideDessert extends Component {
     return (
       <Motion ref="dessert" style={{
         x: spring(this.props.inView ? -15 : (this.props.partlyInView ? -10 : -5)),
-        y: spring(this.props.initialAnimation ? 10 : 20),
+        y: spring(this.props.initialAnimation ? 150 : 180),
         time: spring(this.props.initialAnimation ? 1 : 0),
       }}>
       {({x, y, time}) =>
          <div className="SideDessert" style={{
            left: `${x}vw`,
-           top: `${y}vh`,
+           top: `${y}px`,
            WebkitTransitionDuration: '0.5s',
            transitionDuration: '0.5s',
            WebkitTransitionTimingFunction: 'ease-out',
