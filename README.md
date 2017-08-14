@@ -6,7 +6,7 @@ Inspired by: https://dribbble.com/shots/2285816-Scrolling-effect
 
 |  Implementation         |
 |:-----------------------:|
-|![Output sample](menu.gif) |
+|![Output sample](menu.gif) | ![Output sample](menu2.gif) |
 
 
 ### Instructions
