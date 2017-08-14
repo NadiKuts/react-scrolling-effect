@@ -4,9 +4,9 @@ Scrolling effect implemented with ReactJS
 
 Inspired by: https://dribbble.com/shots/2285816-Scrolling-effect
 
-|  Implementation         |cvdfv|
-|:-----------------------:|:-----------------------:|
-|![Output sample](menu.gif) | ![Output sample](menu2.gif) |
+|  Implementation         |
+|:-----------------------:|
+|![Output sample](menu.gif)|
 
 
 ### Instructions
