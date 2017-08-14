@@ -109,3 +109,45 @@
   z-index: 3;
   box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.5);
 }
+
+@media screen and (max-width: 900px) and (min-width: 450px) {
+  .MainDish {
+    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+  .SideMain{
+    height: 150px;
+  }
+  .SideMain img {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .ContainerMain {
+    height: 350px;
+  }
+  .BackgroundMain {
+    height: 250px;
+  }
+  .MainCard {
+    height: 200px;
+  }
+  .CategoryMain {
+    font-size: 1em;
+  }
+  .MainName {
+    font-size: 1.5em;
+    letter-spacing: 8px;
+  }
+  .MainDescription {
+    font-size: 0.8em;
+  }
+  .PhotoMain {
+    top: 30px;
+    right: -80px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+}

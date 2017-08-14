@@ -6,11 +6,22 @@ import MainName from './MainName';
 import MainDescription from './MainDescription';
 
 class MainCard extends Component {
+  constructor(props) {
+		super(props);
+    this.y = 0;
+    this.yBefore = 0;
+	}
+  componentDidMount = () => {
+      const winWidth = window.innerWidth;
+      this.y = winWidth > 950 ? 150 : (winWidth > 550 ? 100 : 70);
+      this.yPartly = winWidth > 950 ? 80 : (winWidth > 550 ? 80 : 60);
+      this.yBefore = winWidth > 950 ? 250 : (winWidth > 550 ? 220 : 180);
+	} 
   render() {
     return (
       <Motion ref="main" style={{
         x: spring(this.props.inView ? -10 : (this.props.partlyInView ? 2 : 10)),
-        y: spring(this.props.inView ? 150 : (this.props.partlyInView ? 80 : 250)),
+        y: spring(this.props.inView ? this.y : (this.props.partlyInView ? this.yPartly : this.yBefore)),
       }}>
           {({x, y}) =>
           <div className="MainCard" style={{

@@ -9,7 +9,6 @@ class Entree extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
-			isScrolledFirst: false,
       initialAnimation: false,
       inView: false,
       partlyInView: false,
@@ -46,7 +45,6 @@ class Entree extends Component {
     /** Detect if component is completely visible */
     if (this.state.isScrolledFirst == false) {
       this.setState({
-        isScrolledFirst: true,
         initialAnimation: true,
       });
       this.isVisible(this.refs.entree);

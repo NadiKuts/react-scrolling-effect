@@ -39,10 +39,8 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 850px) and (min-width: 450px) {
-  
+@media screen and (max-width: 950px) and (min-width: 550px) {
 }
 
-@media screen and (max-width: 450px) {
-  
+@media screen and (max-width: 550px) {
 }

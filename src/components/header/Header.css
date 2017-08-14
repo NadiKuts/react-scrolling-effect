@@ -98,24 +98,57 @@
   align-self: center;
 }
 
-@media screen and (max-width: 850px) and (min-width: 450px) {
-  
+@media screen and (max-width: 950px) and (min-width: 550px) {
+  .Header {
+    height: 300px;
+    margin-bottom: 200px;
+  }
+  .Title h1 {
+    font-size: 2em;
+    letter-spacing: 25px;
+  }
+  .NoteBackground {
+    height: 200px;
+    width: 90%;
+    top: 100px; 
+    right: -8vw;
+  }
+  .Note {
+    height: 200px;
+    width: 90%;
+    top: 100px; 
+    right: -8vw;
+  }
+  .Date p {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    line-height: 200%;
+    margin: 20px 70px 20px 20px;
+  }
+  .Summary {
+    width: 80%;
+    color: #FFFFFF;
+    font-size: 1em;
+    font-family: "Roboto Condensed", serif;
+    margin: 0 70px 20px 20px;
+    opacity: 1;
+  }
+  .SideDish {
+    height: 150px;
+    top: 100px;
+    left: -10vw;
+    z-index: 1;
+  }
+  .SideDish img {
+    min-height: 150px;
+    max-height: 150px;
+  }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .Title h1 {
-    width: 100%;
     font-size: 1.5em;
-    text-align: center;
-    color: #FFFFFF;
     letter-spacing: 15px;
-    text-shadow: 0 8px 40px rgba(0,0,0,0.3);
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: bold;
-    -webkit-transform: scale(1,2);
-    -moz-transform: scale(1,2);
-    -ms-transform: scale(1,2);
-    -o-transform: scale(1,2);
-    transform: scale(1,2);
   }
 }

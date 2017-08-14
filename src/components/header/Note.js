@@ -8,17 +8,22 @@ class Note extends Component {
 		this.state = {
 			wasLoaded: false
 		};
+    this.y = 0;
+    this.yBefore = 0;
 	}
   
   componentDidMount = () => {
      	this.setState({wasLoaded: !this.state.wasLoaded});
+      const winWidth = window.innerWidth;
+      this.y = winWidth > 950 ? 0 : (winWidth > 550 ? 100 : 70);
+      this.yBefore = winWidth > 950 ? 150 : (winWidth > 550 ? 100 : 70);
 	}
   
   render() {
     return (
       <Motion style={{ 
           opacity: spring(this.state.wasLoaded ? 1 : 0),
-          y: spring(this.state.wasLoaded ? 0 : 150),
+          y: spring(this.state.wasLoaded ? 0 : this.yBefore),
           right: spring(this.props.initialAnimation ? -8 : (this.props.inView ? -8 : 5)),
           time: spring(this.props.initialAnimation ? 0.5 : 0),
          }}>

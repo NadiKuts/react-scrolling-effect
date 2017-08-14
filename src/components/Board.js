@@ -12,16 +12,19 @@ class Board extends Component {
 		this.state = {
 			wasLoaded: false
 		};
+    this.width = 0;
 	}
   
   componentDidMount = () => {
      	this.setState({wasLoaded: !this.state.wasLoaded});
+      const winWidth = window.innerWidth;
+      this.width = winWidth > 950 ? 50 : (winWidth > 550 ? 60 : 70);
 	}
   
   render() {
     return (
       <Motion style={{ 
-          width: spring(this.state.wasLoaded ? 50 : 40),
+          width: spring(this.state.wasLoaded ? this.width : 40),
          }}>
          {({width}) =>
          <div className="Board" style={{

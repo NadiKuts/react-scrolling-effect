@@ -10,10 +10,15 @@ class Main extends Component {
 		this.state = {
 			wasLoaded: false
 		};
+    this.top = 0;
+    this.topBefore = 0;
 	}
   
   componentDidMount = () => {
      	this.setState({wasLoaded: !this.state.wasLoaded});
+      const winWidth = window.innerWidth;
+      this.top = winWidth > 950 ? 150 : (winWidth > 550 ? 100 : 70);
+      this.topBefore = winWidth > 950 ? 100 : (winWidth > 550 ? 80 : 60);
 	}
   
   render() {
@@ -23,7 +28,7 @@ class Main extends Component {
         <Note initialAnimation={this.props.initialAnimation} inView={this.props.inView}></Note>
         <Motion style={{
             opacity: spring(this.state.wasLoaded ? 1 : 0),
-            top: spring(this.state.wasLoaded ? 150 : 100),
+            top: spring(this.state.wasLoaded ? this.top : this.topBefore),
             right: spring(this.props.initialAnimation ? -8 : (this.props.inView ? -8 : 5)),
             time: spring(this.props.initialAnimation ? 1 : 0),
            }}>

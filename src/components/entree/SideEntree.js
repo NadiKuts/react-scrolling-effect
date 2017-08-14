@@ -4,11 +4,21 @@ import './Entree.css';
 import dishPic from '../images/SideEntree.png';
 
 class SideEntree extends Component {
+  constructor(props) {
+		super(props);
+    this.y = 0;
+    this.yBefore = 0;
+	}
+  componentDidMount = () => {
+      const winWidth = window.innerWidth;
+      this.y = winWidth > 950 ? 150 : (winWidth > 550 ? 100 : 70);
+      this.yBefore = winWidth > 950 ? 180 : (winWidth > 550 ? 120 : 100);
+	}  
   render() {
     return (
       <Motion ref="entree" style={{
         x: spring(this.props.inView ? -15 : (this.props.partlyInView ? -10 : -5)),
-        y: spring(this.props.initialAnimation ? 150 : 180),
+        y: spring(this.props.initialAnimation ? this.y : this.yBefore),
         time: spring(this.props.initialAnimation ? 1 : 0),
       }}>
       {({x, y, time}) =>

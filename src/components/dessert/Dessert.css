@@ -107,3 +107,46 @@
   z-index: 4;
   box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.5);
 }
+
+@media screen and (max-width: 900px) and (min-width: 550px) {
+  .Dessert {
+    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+  .ContainerDessert {
+    height: 350px;
+  }
+  .SideDessert {
+    height: 150px;
+  }
+  .SideDessert img {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .BackgroundDessert {
+    height: 250px;
+  }
+  .DessertCard {
+    height: 200px;
+    top: -20px;
+  }
+  .CategoryDessert {
+    font-size: 1em;
+  }
+  .DessertName {
+    font-size: 1.5em;
+    letter-spacing: 8px;
+  }
+  .DessertDescription {
+    font-size: 0.8em;
+  }
+  .PhotoDessert {
+    top: -30px;
+    right: -30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+}
