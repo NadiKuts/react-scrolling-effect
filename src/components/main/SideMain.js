@@ -7,13 +7,13 @@ class SideMain extends Component {
   render() {
     return (
       <Motion ref="entree" style={{
-        x: spring(this.props.inView ? -250 : (this.props.partlyInView ? -180 : -150)),
-        y: spring(this.props.inView ? 200 : 250),
+        x: spring(this.props.inView ? -20 : (this.props.partlyInView ? -15 : -5)),
+        y: spring(this.props.inView ? 20 : 20),
       }}>
       {({x, y}) =>
          <div className="SideMain" style={{
-           right: `${x}px`,
-           top: `${y}px`,
+           right: `${x}vw`,
+           top: `${y}vh`,
            WebkitTransitionDuration: '0.5s',
            transitionDuration: '0.5s',
            WebkitTransitionTimingFunction: 'ease-out',
