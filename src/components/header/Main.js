@@ -24,13 +24,13 @@ class Main extends Component {
         <Motion style={{
             opacity: spring(this.state.wasLoaded ? 1 : 0),
             top: spring(this.state.wasLoaded ? 20 : 15),
-            right: spring(this.props.initialAnimation ? -8 : (this.props.scrolled ? -8 : 10)),
+            right: spring(this.props.initialAnimation ? -8 : (this.props.scrolled ? -8 : 5)),
             time: spring(this.props.initialAnimation ? 1 : 0),
            }}>
            {({opacity, top, right, time}) =>
            <div className='NoteBackground' style={{
                   opacity: `${opacity}`,
-                  right: `${right}vh`,
+                  right: `${right}vw`,
                   top: `${top}vh`,
                   WebkitTransitionDuration: '0.5s',
                   transitionDuration: '0.5s',

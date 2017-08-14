@@ -42,7 +42,7 @@
   width: 80%;
   position: absolute;
   top: 20vh; 
-  right: -8vh;
+  right: -8vw;
   display: flex;
   flex-direction: column;
   background-color: #5E6E79;
@@ -55,7 +55,7 @@
   width: 80%;
   position: absolute;
   top: 20vh; 
-  right: -8vh;
+  right: -8vw;
   display: flex;
   flex-direction: column;
   z-index: 2;

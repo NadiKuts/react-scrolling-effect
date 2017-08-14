@@ -3,7 +3,7 @@
   width: 100%;
   position: relative;
   z-index: 2;
-  margin-top: 40vh;
+  margin-top: 45vh;
 }
 .ContainerEntree {
   background-color: #2D3A4B;
@@ -31,20 +31,20 @@
 .BackgroundCard {
   background-color: #C4CB53;
   height: 40vh;
-  width: 120%;
+  width: 130%;
   opacity: 0.9;
   position: absolute;
-  left: -30px;
+  left: -5vw;
   z-index: 2;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
 }
 .EntreeCard {
   background-color: #FFFFFF;
-  height: 300px;
-  width: 65%;
+  height: 40vh;
+  width: 90%;
   position: absolute;
-  top: -30px;
-  left: 60px;
+  top: -5vh;
+  left: 5vw;
   z-index: 3;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
   display: flex;
@@ -73,14 +73,14 @@
 }
 .Category {
   color: #D4A18E;
-  font-size: 18px;
+  font-size: 1.3em;
   font-weight: bold;
   flex: 2;
   width: 50%;
 }
 .DishName {
   color: #708590;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: bold;
   letter-spacing: 10px;
   flex: 2;
@@ -89,7 +89,7 @@
 }
 .DishDescription {
   color: #708590;
-  font-size: 14px;
+  font-size: 1em;
   flex: 3;
   width: 50%;
   margin-bottom: 5px;

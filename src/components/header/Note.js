@@ -19,13 +19,13 @@ class Note extends Component {
       <Motion style={{ 
           opacity: spring(this.state.wasLoaded ? 1 : 0),
           y: spring(this.state.wasLoaded ? 0 : 20),
-          right: spring(this.props.initialAnimation ? -8 : (this.props.scrolled ? -8 : 10)),
+          right: spring(this.props.initialAnimation ? -8 : (this.props.scrolled ? -8 : 5)),
           time: spring(this.props.initialAnimation ? 0.5 : 0),
          }}>
          {({opacity, y, right, time}) =>
          <div className="Note" style={{
                 opacity: `${opacity}`,
-                right: `${right}vh`,
+                right: `${right}vw`,
                 // top: `${top}vh`,
                 WebkitTransform: `translateY(${y}vh)`,
                 transform: `translateY(${y}vh)`,

@@ -67,12 +67,10 @@ class Entree extends Component {
   render() {
     return (
       <Motion ref="entree" style={{ 
-
           opacity: spring(this.state.wasLoaded ? 1 : 0),
          }}>
          {({width, opacity}) =>
          <div className="Entree" style={{
-            
                 opacity: `${opacity}`,
                 WebkitTransitionDuration: '0.5s',
                 transitionDuration: '0.5s',
