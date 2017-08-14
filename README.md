@@ -2,6 +2,8 @@
 
 Scrolling effect implemented with ReactJS
 
+[LIVE DEMO](https://nadikuts.github.io/)
+
 Inspired by: https://dribbble.com/shots/2285816-Scrolling-effect
 
 |  Implementation         |
