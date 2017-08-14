@@ -8,7 +8,7 @@
 .ContainerDessert {
   background-color: #2D3A4B;
   height: 500px;
-  width: 700px;
+  width: 100%;
   position: relative;
   z-index: 2;
 }
