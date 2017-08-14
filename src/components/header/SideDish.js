@@ -17,13 +17,13 @@ class SideDish extends Component {
   
   render() {
     return (
-      <Motion style={{ 
-          x: spring(this.props.initialAnimation ? -150 : (this.props.scrolled ? -150 : -50)),
-          time: spring(this.props.initialAnimation ? 1 : 0),
-         }}>
+      <Motion style={{
+        x: spring(this.props.initialAnimation ? -10 : (this.props.inView ? -5 : 0)),
+        time: spring(this.props.initialAnimation ? 1 : 0),
+      }}>
          {({x, time}) =>
          <div className="SideDish" style={{
-           left: `${x}px`,
+           left: `${x}vw`,
            WebkitTransitionDuration: '0.5s',
            transitionDuration: '0.5s',
            WebkitTransitionTimingFunction: 'ease-out',

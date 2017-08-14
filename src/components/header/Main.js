@@ -19,12 +19,12 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-        <Title initialAnimation={this.props.initialAnimation} scrolled={this.props.scrolled}></Title>
-        <Note initialAnimation={this.props.initialAnimation} scrolled={this.props.scrolled}></Note>
+        <Title initialAnimation={this.props.initialAnimation} inView={this.props.inView}></Title>
+        <Note initialAnimation={this.props.initialAnimation} inView={this.props.inView}></Note>
         <Motion style={{
             opacity: spring(this.state.wasLoaded ? 1 : 0),
             top: spring(this.state.wasLoaded ? 20 : 15),
-            right: spring(this.props.initialAnimation ? -8 : (this.props.scrolled ? -8 : 5)),
+            right: spring(this.props.initialAnimation ? -8 : (this.props.inView ? -8 : 5)),
             time: spring(this.props.initialAnimation ? 1 : 0),
            }}>
            {({opacity, top, right, time}) =>

@@ -31,16 +31,6 @@ class Header extends Component {
   }
   /** Detect scrolling direction and visibility of zhe component */
   onScroll = (event) => {
-    /** Detect direction of scrolling */
-    if (this.state.lastScrollPos < window.scrollY) {
-      this.setState({
-        lastScrollPos: window.scrollY,
-      });
-    } else {
-      this.setState({
-        lastScrollPos: window.scrollY,
-      });
-    }
     /** Detect if component is completely visible */
     if (this.state.isScrolledFirst == false) {
       this.setState({
@@ -64,8 +54,8 @@ class Header extends Component {
   render() {
     return (
       <div className="Header" ref="header">
-        <SideDish initialAnimation={this.state.initialAnimation} scrolled={this.state.inView}></SideDish>
-        <Main initialAnimation={this.state.initialAnimation} scrolled={this.state.inView}></Main>
+        <SideDish initialAnimation={this.state.initialAnimation} inView={this.state.inView}></SideDish>
+        <Main initialAnimation={this.state.initialAnimation} inView={this.state.inView}></Main>
       </div>
     );
   }
