@@ -21,7 +21,7 @@ class Board extends Component {
   render() {
     return (
       <Motion style={{ 
-          width: spring(this.state.wasLoaded ? 50 : 40),
+          width: spring(this.state.wasLoaded ? 60 : 50),
          }}>
          {({width}) =>
          <div className="Board" style={{
