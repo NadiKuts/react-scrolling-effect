@@ -65,12 +65,10 @@ class Dessert extends Component {
   render() {
     return (
       <Motion ref="dessert" style={{ 
-
           opacity: spring(this.state.wasLoaded ? 1 : 0),
          }}>
          {({width, opacity}) =>
          <div className="Dessert" style={{
-            
                 opacity: `${opacity}`,
                 WebkitTransitionDuration: '0.5s',
                 transitionDuration: '0.5s',

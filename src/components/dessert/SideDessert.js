@@ -7,14 +7,14 @@ class SideDessert extends Component {
   render() {
     return (
       <Motion ref="dessert" style={{
-        x: spring(this.props.inView ? -200 : (this.props.partlyInView ? -180 : -150)),
-        y: spring(this.props.initialAnimation ? 100 : 150),
-        time: spring(this.props.inView ? 0 : (this.props.partlyInView ? 0 : 1)),
+        x: spring(this.props.inView ? -15 : (this.props.partlyInView ? -10 : -5)),
+        y: spring(this.props.initialAnimation ? 10 : 20),
+        time: spring(this.props.initialAnimation ? 1 : 0),
       }}>
       {({x, y, time}) =>
          <div className="SideDessert" style={{
-           left: `${x}px`,
-           top: `${y}px`,
+           left: `${x}vw`,
+           top: `${y}vh`,
            WebkitTransitionDuration: '0.5s',
            transitionDuration: '0.5s',
            WebkitTransitionTimingFunction: 'ease-out',
