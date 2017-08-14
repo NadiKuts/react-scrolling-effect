@@ -148,5 +148,40 @@
 }
 
 @media screen and (max-width: 550px) {
-
+  .Entree {
+    height: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .ContainerEntree {
+    height: 280px;
+  }
+  .SideEntree {
+    height: 100px;
+  }
+  .SideEntree img {
+    min-height: 100px;
+    max-height: 100px;
+  }
+  .BackgroundCard {
+    height: 200px;
+  }
+  .EntreeCard {
+    height: 180px;
+    top: -15px;
+  }
+  .Category {
+    font-size: 0.9em;
+  }
+  .DishName {
+    font-size: 1em;
+    letter-spacing: 5px;
+  }
+  .DishDescription {
+    font-size: 0.7em;
+  }
+  .PhotoEntree {
+    top: -30px;
+    right: -20px;
+  }
 }

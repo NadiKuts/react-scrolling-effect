@@ -110,7 +110,7 @@
   box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.5);
 }
 
-@media screen and (max-width: 900px) and (min-width: 450px) {
+@media screen and (max-width: 900px) and (min-width: 550px) {
   .MainDish {
     height: 300px;
     margin-top: 100px;
@@ -148,6 +148,41 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-
+@media screen and (max-width: 550px) {
+  .MainDish {
+    height: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .SideMain{
+    height: 100px;
+  }
+  .SideMain img {
+    min-height: 100px;
+    max-height: 100px;
+  }
+  .ContainerMain {
+    height: 280px;
+  }
+  .BackgroundMain {
+    height: 200px;
+  }
+  .MainCard {
+    height: 180px;
+    width: 80%;
+  }
+  .CategoryMain {
+    font-size: 0.9em;
+  }
+  .MainName {
+    font-size: 1em;
+    letter-spacing: 3px;
+  }
+  .MainDescription {
+    font-size: 0.7em;
+  }
+  .PhotoMain {
+    top: 20px;
+    right: -50px;
+  }
 }

@@ -110,35 +110,25 @@
   .NoteBackground {
     height: 200px;
     width: 90%;
-    top: 100px; 
-    right: -8vw;
+    top: 100px;
   }
   .Note {
     height: 200px;
     width: 90%;
     top: 100px; 
-    right: -8vw;
   }
   .Date p {
-    color: #FFFFFF;
     font-size: 1.5em;
     letter-spacing: 3px;
-    line-height: 200%;
     margin: 20px 70px 20px 20px;
   }
   .Summary {
-    width: 80%;
-    color: #FFFFFF;
     font-size: 1em;
-    font-family: "Roboto Condensed", serif;
     margin: 0 70px 20px 20px;
-    opacity: 1;
   }
   .SideDish {
     height: 150px;
     top: 100px;
-    left: -10vw;
-    z-index: 1;
   }
   .SideDish img {
     min-height: 150px;
@@ -147,8 +137,40 @@
 }
 
 @media screen and (max-width: 550px) {
+  .Header {
+    height: 200px;
+    margin-bottom: 100px;
+  }
   .Title h1 {
     font-size: 1.5em;
     letter-spacing: 15px;
+  }
+  .NoteBackground {
+    height: 150px;
+    width: 90%;
+    top: 80px; 
+  }
+  .Note {
+    height: 150px;
+    width: 90%;
+    top: 80px; 
+  }
+  .Date p {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    margin: 10px 50px 10px 10px;
+  }
+  .Summary {
+    font-size: 0.8em;
+    font-family: "Roboto Condensed", serif;
+    margin: 0 50px 10px 10px;
+  }
+  .SideDish {
+    height: 100px;
+    top: 70px;
+  }
+  .SideDish img {
+    min-height: 100px;
+    max-height: 100px;
   }
 }

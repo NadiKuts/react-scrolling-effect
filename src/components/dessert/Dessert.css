@@ -147,6 +147,41 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-
+@media screen and (max-width: 550px) {
+  .Dessert {
+    height: 200px;
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+  .ContainerDessert {
+    height: 280px;
+  }
+  .SideDessert {
+    height: 100px;
+  }
+  .SideDessert img {
+    min-height: 100px;
+    max-height: 100px;
+  }
+  .BackgroundDessert {
+    height: 200px;
+  }
+  .DessertCard {
+    height: 180px;
+    top: -15px;
+  }
+  .CategoryDessert {
+    font-size: 0.9em;
+  }
+  .DessertName {
+    font-size: 1em;
+    letter-spacing: 5px;
+  }
+  .DessertDescription {
+    font-size: 0.7em;
+  }
+  .PhotoDessert {
+    top: -30px;
+    right: -20px;
+  }
 }
